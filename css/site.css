@@ -4670,8 +4670,11 @@ body {
 header.header-wrapper {
   background: linear-gradient(45deg, white, #bcf4e9);
   padding: 5rem 0 0 0;
-  min-height: 700px;
-  position: relative; }
+  position: relative;
+  min-height: 300px; }
+  @media (min-width: 768px) {
+    header.header-wrapper {
+      min-height: 700px; } }
   header.header-wrapper h1 {
     margin-top: 4.75rem;
     color: #082624;
@@ -4682,15 +4685,17 @@ header.header-wrapper {
   display: block;
   position: relative;
   content: "";
-  min-height: 280px;
-  margin: 100px 0 0 0;
   background: transparent url(../images/image-bar.jpg) bottom no-repeat;
-  background-size: 100% auto; }
+  background-size: 100% auto;
+  min-height: 100px;
+  margin: 50px 0 0 0; }
+  @media (min-width: 768px) {
+    .header-image-bar {
+      min-height: 280px;
+      margin: 100px 0 0 0; } }
   .header-image-bar .design-is-button {
     display: block;
     position: absolute;
-    top: 75%;
-    right: 25%;
     width: 9.375rem;
     height: 9.375rem;
     background-image: url("../images/design-is-circle-back.svg");
@@ -4868,6 +4873,18 @@ div.icon-group {
     text-decoration: none;
     border-bottom: solid 1px #496B6B; }
 
+.wp {
+  visibility: hidden; }
+
+.wp-1 {
+  animation-delay: .1s; }
+
+.wp-2 {
+  animation-delay: .2s; }
+
+.wp.animated {
+  visibility: visible; }
+
    /* FULL SCREEN MODAL STYLES
 -------------------------------------------------- */
 .fullscreen .modal-dialog {
@@ -4884,7 +4901,7 @@ div.icon-group {
   border-radius: 0;
   margin: 0 auto;
   color: #fff;
-  background: rgba(168, 144, 77, 0.95);
+  background: linear-gradient(25deg, rgba(100, 204, 183, 0.95), rgba(168, 144, 77, 0.95) 35%);
   overflow: auto;
   text-align: center; }
   .fullscreen .modal-content .modal-title {
@@ -4895,12 +4912,13 @@ div.icon-group {
   .fullscreen .modal-content .sr-modal-close {
     display: block;
     position: fixed;
-    top: 3rem;
-    right: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
     width: 35px;
     height: 35px;
     background-image: url("../images/sr-modal-close.svg");
-    opacity: 100%; }
+    opacity: 100%;
+    z-index: 5; }
   .fullscreen .modal-content button.close.btn.btn-link {
     color: #fff;
     opacity: 1; }
@@ -4909,9 +4927,8 @@ div.icon-group {
     background-color: transparent;
     border: 0; }
 
-.fullscreen .modal-body p, .fullscreen .modal-body a {
-  color: #fff;
-  font: 2rem/3.5rem "Larsseit-light", Helvetica, Arial, sans-serif; }
+.fullscreen .modal-body p {
+  margin-bottom: 2.5rem; }
 
 @media (max-width: 480px) {
   .fullscreen .modal-body a {
@@ -4921,8 +4938,16 @@ div.icon-group {
     font-weight: 700; } }
 /* -------------- MEDIA QUERIES ------------------ */
 .modal-wrapper {
-  width: 90%;
+  width: 80%;
   margin: 0 auto; }
+
+.fullscreen .modal-body p, .fullscreen .modal-body a {
+  color: #fff;
+  font: 1.5rem/2rem "Larsseit-light", Helvetica, Arial, sans-serif; }
+
+.design-is-button {
+  top: 75%;
+  right: 35%; }
 
 @media (min-width: 768px) {
   .secondary-content {
@@ -4930,7 +4955,15 @@ div.icon-group {
 
   .modal-wrapper {
     width: 70%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .fullscreen .modal-body p, .fullscreen .modal-body a {
+    color: #fff;
+    font: 1.75rem/2.5rem "Larsseit-light", Helvetica, Arial, sans-serif; }
+
+  .design-is-button {
+    top: 75%;
+    right: 25%; } }
 @media (min-width: 992px) {
   .secondary-content {
     margin-top: 0rem; } }

@@ -1,4 +1,13 @@
-$('#wp-1').waypoint(function() {
-   $(this).addCSS('fadeIn');
-   },
-{ offset: '30%' });
+function onScrollAnimations() {
+  $('.wp-1').waypoint(function() {
+    $('.wp-1').addClass('animated fadeInUp');
+  }, {
+    offset: '75%'
+  });
+
+  $('.wp-2').waypoint(function() {
+    $('.wp-2').addClass('animated fadeInRight');
+  }, {
+    offset: '75%'
+  });
+}
