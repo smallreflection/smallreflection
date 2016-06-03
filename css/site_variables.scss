@@ -1,0 +1,46 @@
+// Colors
+$body-bg:                   #082624;
+
+$gray-dark:                 #082624;
+$gray:                      #496B6B;
+$gray-light:                #818a91;
+$gray-lighter:              #eceeef;
+$gray-lightest:             #f7f7f9;
+$white:                     #ffffff;
+
+$brand-primary:             #A8904E;
+$brand-success:             #84E3D0;
+$brand-info:                #5bc0de;
+$brand-warning:             #BEAB7A;
+$brand-danger:              #FF772F;
+
+$link-color:                 $brand-danger;
+$link-decoration:            none;
+$link-hover-color:           lighten($brand-danger, 15%);
+$link-hover-decoration:      none;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-sans-serif:     "Larsseit-light", Helvetica, Arial, sans-serif;
+$font-sans-serif-medium:     "Larsseit-Medium", Helvetica, Arial, sans-serif;
+$font-sans-serif-bold: "Larsseit-Bold", Helvetica, Arial, sans-serif;
+$font-serif:          "Times New Roman", Times, serif ;
+$font-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace ;
+$font-base:           $font-family-sans-serif ;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-padding-x:                  3rem;
+$btn-padding-y:                  .5rem;
+$btn-font-weight:                normal;
+
+$btn-primary-color:              $link-color;
+$btn-primary-bg:                 $link-color;
+$btn-primary-border:             $link-color;
+
+$btn-border-radius:             .75rem;

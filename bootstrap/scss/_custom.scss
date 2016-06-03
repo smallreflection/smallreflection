@@ -1,0 +1,29 @@
+// Colors
+$body-bg:             #D5EDFA;
+
+$gray-dark:           #373a3c;
+$gray:                #55595c;
+$gray-light:          #818a91;
+$gray-lighter:        #eceeef;
+$gray-lightest:       #f7f7f9;
+
+$brand-primary:       #0CDCC4;
+$brand-success:       #5cb85c;
+$brand-info:          #5bc0de;
+$brand-warning:       #f0ad4e;
+$brand-danger:        #d9534f;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:     "Work Sans", Helvetica, Arial, sans-serif;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:           $font-family-sans-serif;
+
+// Links
+$link-color:                 $brand-primary !default;
+$link-decoration:            none !default;
+$link-hover-color:           lighten($link-color, 15%) !default;
+$link-hover-decoration:      underline !default;
