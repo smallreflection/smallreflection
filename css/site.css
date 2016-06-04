@@ -4665,12 +4665,13 @@ body {
   color: #ffffff;
   background: #082624 url("../images/magnifying-glass-back.png");
   background-repeat: no-repeat;
-  background-position: 90% 105%; }
+  background-position: 90% 105%;
+  overflow-x: hidden; }
 
 header.header-wrapper {
   background: linear-gradient(45deg, white, #bcf4e9);
   padding: 5rem 0 0 0;
-  position: relative;
+  width: 100%;
   min-height: 300px; }
   @media (min-width: 768px) {
     header.header-wrapper {
@@ -4748,6 +4749,8 @@ a {
     color: #ea4c89; }
   a.twitter:hover {
     color: #55acee; }
+  a.medium:hover {
+    color: #02b875; }
   a.pinterest:hover {
     color: #bd081c; }
   a.linkedin:hover {
@@ -4811,15 +4814,18 @@ a.portrait-link:hover + div.portrait-hidden {
 div.icon-group {
   display: block; }
   div.icon-group i {
-    font-size: 2rem;
-    padding: .75rem;
+    font-size: 1.85rem;
     display: inline-block;
+    margin: 0;
     border-radius: .325rem;
-    margin: 0; }
+    margin: .5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    text-align: center; }
   div.icon-group a {
     color: #fff;
     display: inline-block;
-    margin: 0;
+    margin: .15rem 0;
     border: 1px solid #14312F;
     transition: background-color .5s; }
     div.icon-group a:hover {
@@ -4864,7 +4870,7 @@ div.icon-group {
 .footer {
   margin-top: 5rem; }
   .footer p {
-    font-size: 1rem;
+    font: 1rem/1.5rem "Larsseit-light", Helvetica, Arial, sans-serif;
     letter-spacing: .125rem;
     color: #496B6B;
     margin-top: 3rem; }
@@ -4888,20 +4894,20 @@ div.icon-group {
    /* FULL SCREEN MODAL STYLES
 -------------------------------------------------- */
 .fullscreen .modal-dialog {
-  margin: 0 0 0 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   min-height: 100%;
-  padding: 0;
-  color: #333; }
+  color: #fff; }
 
 .fullscreen .modal-content {
   height: 100%;
   min-height: 100%;
   border-radius: 0;
-  margin: 0 auto;
+  margin: 0;
   color: #fff;
-  background: linear-gradient(25deg, rgba(100, 204, 183, 0.95), rgba(168, 144, 77, 0.95) 35%);
+  background: rgba(168, 144, 77, 0.95);
   overflow: auto;
   text-align: center; }
   .fullscreen .modal-content .modal-title {
@@ -4924,6 +4930,7 @@ div.icon-group {
     opacity: 1; }
   .fullscreen .modal-content button.btn:hover {
     padding: 0;
+    margin: 0;
     background-color: transparent;
     border: 0; }
 

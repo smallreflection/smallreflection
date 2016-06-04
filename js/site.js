@@ -5,13 +5,13 @@
     $('.wp-1').waypoint(function() {
       $('.wp-1').addClass('animated fadeInUp');
     }, {
-      offset: '75%'
+      offset: '80%'
     });
 
     $('.wp-2').waypoint(function() {
       $('.wp-2').addClass('animated fadeInRight');
     }, {
-      offset: '75%'
+      offset: '80%'
     });
   }
 
