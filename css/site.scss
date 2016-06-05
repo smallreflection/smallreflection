@@ -19,39 +19,63 @@ body {
   overflow-x:hidden;
 }
 
+.hero-ilustrations {
+  display:block;
+  position:absolute;
+  content:'';
+  background: url('../images/hero-illustrations@2x.png') no-repeat;
+  background-size:80%;
+  @include media-breakpoint-up(xs) {
+    top:-100px;
+    right:-400px;
+    width:700px;
+    height:700px;
+  }
+  @include media-breakpoint-up(md) {
+    top:-100px;
+    right:-200px;
+    width:700px;
+    height:700px;
+  }
+}
+
 header.header-wrapper {
     background:linear-gradient(45deg, rgba(255,255,255,1),rgba(188,244,233,1));
     padding:5rem 0 0 0;
     width:100%;
+    position:relative;
     @include media-breakpoint-up(xs) {
-      min-height:300px;
+      min-height:400px;
     }
     @include media-breakpoint-up(md) {
-      min-height:700px;
+      min-height:640px;
     }
 
     h1 {
       margin-top:4.75rem;
       color:$gray-dark;
-      font:5.5rem $font-sans-serif-medium;
+      font:5.5rem/5.5rem $font-sans-serif-medium;
       letter-spacing:-.125rem;
     }
-}
 
-.header-image-bar {
-  display:block;
-  position:relative;
-  content:"";
-  background:transparent url(../images/image-bar.jpg) bottom no-repeat;
-  background-size:100% auto;
-  @include media-breakpoint-up(xs) {
-    min-height:100px;
-    margin:50px 0 0 0;
-  }
-  @include media-breakpoint-up(md) {
-    min-height:280px;
-      margin:100px 0 0 0;
-  }
+    .header-image-bar {
+      display:block;
+      position:relative;
+      content:"";
+      @include media-breakpoint-up(xs) {
+        min-height:100px;
+        margin:50px 0 0 0;
+        background:transparent url('../images/image-bar@2x.jpg') bottom no-repeat;
+        background-size:100% auto;
+      }
+      @include media-breakpoint-up(md) {
+        min-height:200px;
+          margin:150px 0 0 0;
+          background:transparent url('../images/image-bar-short@2x.jpg') bottom no-repeat;
+          background-size:100% auto;
+      }
+    } // header-wrapper
+
 
   .design-is-button {
     display:block;
@@ -63,17 +87,13 @@ header.header-wrapper {
     font-family:$font-sans-serif-bold;
     transition:top 200ms ease-in-out;
     &:hover {
-      top:65%;
       box-shadow: 0px 7px 24px rgba(2,14,14,.55);
       border-radius:50%;
     }
-    p {
-      padding-top:30%;
-      font-size:1rem;
       a {
         display:block;
-        width:9.375rem;
-        height:9.375rem;
+        width:100%;
+        height:100%;
         color:#fff;
         cursor:pointer;
         text-transform:uppercase;
@@ -84,13 +104,16 @@ header.header-wrapper {
           text-decoration:none;
           border-bottom:0;
         }
+        p {
+          padding-top:30%;
+          font-size:1rem;
+          }
       } // a
       a:hover::after {
         display:none;
       }
-    } // p
+    } // design-is-button
   }
-}
 
 img.logo {
   max-width:320px;
@@ -146,14 +169,14 @@ div.portrait-hidden {
   position:absolute;
   display:block;
   opacity:0;
-  width:570px;
-  height:450px;
+  width:507px;
+  height:557px;
   left:-35%;
   top:50px;
-  background:#14312F url("../images/profile-background-570x450.jpg");
+  background:transparent url("../images/profile-background-507x557.png");
   background-position:cover;
   z-index:-1;
-  transition:opacity .25s ease-out, top .25s ease-out;
+  transition:opacity .35s ease-out, top .25s ease-in-out;
   top:25px;
 }
 
@@ -164,7 +187,7 @@ a.portrait-link {
 a.portrait-link:hover + div.portrait-hidden {
     opacity:1;
     position:absolute;
-    top:-35px;
+    top:-150px;
 }
 
 .btn, .btn-primary {
@@ -306,22 +329,26 @@ div.icon-group {
        margin-bottom:2rem;
      }
 
-     .sr-modal-close {
-       display:block;
-       position:fixed;
-       top:1.5rem;
-       right:1.5rem;
-       width:35px;
-       height:35px;
-       background-image:url("../images/sr-modal-close.svg");
-       opacity:100%;
-       z-index:5;
-      //  margin:1.5rem 1.5rem 0 0;
-     }
+
 
      button.close.btn.btn-link {
        color:#fff;
        opacity:1;
+       position:fixed;
+       top:1.5rem;
+       right:1.5rem;
+       z-index:10;
+       width:45px;
+       height:45px;
+
+       i.sr-modal-close {
+         display:block;
+         width:45px;
+         height:45px;
+         background-image:url("../images/sr-modal-close.svg");
+         opacity:100%;
+        //  margin:1.5rem 1.5rem 0 0;
+       }
      }
      button.btn {
          &:hover {
@@ -358,8 +385,11 @@ div.icon-group {
          font:1.5rem/2rem $font-sans-serif;
      }
      .design-is-button {
-       top:75%;
+       top:40%;
        right:35%;
+       &:hover {
+         top:30%;
+       }
      }
    }
 
@@ -380,8 +410,11 @@ div.icon-group {
          font:1.75rem/2.5rem $font-sans-serif;
      }
      .design-is-button {
-       top:75%;
+       top:65%;
        right:25%;
+       &:hover {
+         top:55%;
+       }
      }
 
   }
