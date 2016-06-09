@@ -1,0 +1,73 @@
+// html, body {
+//   overflow-x: hidden;
+// }
+
+body {
+  font:1.5rem/1.65em $font-sans-serif;
+  font-weight:normal;
+  letter-spacing:.05rem;
+  color:$white;
+  background:$gray-dark url("../images/magnifying-glass-back.png");
+  background-repeat:no-repeat;
+  background-position:90% 105%;
+  overflow-x:hidden;
+}
+
+h1 {
+  color:$white;
+  font-:$font-sans-serif;
+}
+
+h2 {
+  font:2rem/2.25rem $font-sans-serif-bold;
+  margin-bottom:3rem;
+  font-weight:regular;
+}
+
+a {
+  color:$link-color;
+  position:relative;
+  &.worthwhile:hover { color:#F47942; }
+  &.dribbble:hover { color:#ea4c89; }
+  &.twitter:hover { color:#55acee; }
+  &.medium:hover { color:#02b875; }
+  &.pinterest:hover { color:#bd081c; }
+  &.linkedin:hover { color:#0077B5; }
+    &:hover {
+      color:$link-hover-color;
+      text-decoration: none;
+      transition:color .5s;
+    }
+}
+
+a:hover::after {
+      content: "";
+      width:100%;
+      display:block;
+      position:absolute;
+      height:15px;
+      left:0;
+      bottom:-5px;
+      background-color:#14312F;
+      z-index:-1;
+}
+
+.btn, .btn-primary {
+  color:$btn-primary-color;
+  background-color:transparent;
+  padding:$btn-padding-y $btn-padding-x;
+  border:solid 4px $btn-primary-border;
+  font-size:1.5rem;
+  border-radius:$btn-border-radius;
+  margin-top:2rem;
+  font-family:$font-sans-serif-bold;
+  &:hover {
+    background:$btn-primary-bg;
+    color:$white;
+    border:solid 4px $btn-primary-border;
+  }
+  &:active, &:focus, &:active:focus {
+    background:darken($btn-primary-bg,10%);
+    border:solid 4px darken($btn-primary-border,10%);
+  }
+}

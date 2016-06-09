@@ -1,0 +1,16 @@
+// waypoints classes
+    .wp {
+      visibility: hidden;
+    }
+
+    .wp-1 {
+      animation-delay: .1s;
+    }
+
+    .wp-2 {
+      animation-delay: .2s;
+    }
+
+    .wp.animated {
+      visibility: visible;
+    }

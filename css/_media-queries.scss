@@ -1,0 +1,60 @@
+/* -------------- MEDIA QUERIES ------------------ */
+
+ @include media-breakpoint-up(xs) {
+   .modal-wrapper {
+     width:80%;
+     margin:0 auto;
+   }
+   .fullscreen .modal-body p, .fullscreen .modal-body a {
+        color: #fff;
+        font:1.5rem/2rem $font-sans-serif;
+    }
+    .design-is-button {
+      top:40%;
+      right:35%;
+      &:hover {
+        top:30%;
+      }
+    }
+  }
+
+ @include media-breakpoint-up(sm) {
+  }
+
+ @include media-breakpoint-up(md) {
+   .secondary-content {
+     margin-top:5rem;
+   }
+   .modal-wrapper {
+     width:70%;
+     margin:0 auto;
+   }
+
+   .fullscreen .modal-body p, .fullscreen .modal-body a {
+        color: #fff;
+        font:1.75rem/2.5rem $font-sans-serif;
+    }
+    .design-is-button {
+      top:65%;
+      right:25%;
+      &:hover {
+        top:55%;
+      }
+    }
+
+ }
+
+ @include media-breakpoint-up(lg) {
+   .secondary-content {
+     margin-top:0rem;
+   }
+}
+
+ @include media-breakpoint-up(xl) {  }
+
+// this is a fix for various browser printing bugs
+@media print {
+ .container {
+   width: auto;
+ }
+}

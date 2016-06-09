@@ -3463,6 +3463,75 @@ body {
   background-position: 90% 105%;
   overflow-x: hidden; }
 
+h1 {
+  color: #ffffff;
+  font-: "Larsseit-light", Helvetica, Arial, sans-serif; }
+
+h2 {
+  font: 2rem/2.25rem "Larsseit-Bold", Helvetica, Arial, sans-serif;
+  margin-bottom: 3rem;
+  font-weight: regular; }
+
+a {
+  color: #FF772F;
+  position: relative; }
+  a.worthwhile:hover {
+    color: #F47942; }
+  a.dribbble:hover {
+    color: #ea4c89; }
+  a.twitter:hover {
+    color: #55acee; }
+  a.medium:hover {
+    color: #02b875; }
+  a.pinterest:hover {
+    color: #bd081c; }
+  a.linkedin:hover {
+    color: #0077B5; }
+  a:hover {
+    color: #ffa97c;
+    text-decoration: none;
+    transition: color .5s; }
+
+a:hover::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  height: 15px;
+  left: 0;
+  bottom: -5px;
+  background-color: #14312F;
+  z-index: -1; }
+
+.btn, .btn-primary {
+  color: #FF772F;
+  background-color: transparent;
+  padding: 0.5rem 3rem;
+  border: solid 4px #FF772F;
+  font-size: 1.5rem;
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  font-family: "Larsseit-Bold", Helvetica, Arial, sans-serif; }
+  .btn:hover, .btn-primary:hover {
+    background: #FF772F;
+    color: #ffffff;
+    border: solid 4px #FF772F; }
+  .btn:active, .btn:focus, .btn:active:focus, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
+    background: #fb5700;
+    border: solid 4px #fb5700; }
+
+.wp {
+  visibility: hidden; }
+
+.wp-1 {
+  animation-delay: .1s; }
+
+.wp-2 {
+  animation-delay: .2s; }
+
+.wp.animated {
+  visibility: visible; }
+
 .hero-ilustrations {
   display: block;
   position: absolute;
@@ -3544,46 +3613,6 @@ img.look-deeper {
   margin-top: 4.125rem;
   display: block; }
 
-h1 {
-  color: #ffffff;
-  font-: "Larsseit-light", Helvetica, Arial, sans-serif; }
-
-h2 {
-  font: 2rem/2.25rem "Larsseit-Bold", Helvetica, Arial, sans-serif;
-  margin-bottom: 3rem;
-  font-weight: regular; }
-
-a {
-  color: #FF772F;
-  position: relative; }
-  a.worthwhile:hover {
-    color: #F47942; }
-  a.dribbble:hover {
-    color: #ea4c89; }
-  a.twitter:hover {
-    color: #55acee; }
-  a.medium:hover {
-    color: #02b875; }
-  a.pinterest:hover {
-    color: #bd081c; }
-  a.linkedin:hover {
-    color: #0077B5; }
-  a:hover {
-    color: #ffa97c;
-    text-decoration: none;
-    transition: color .5s; }
-
-a:hover::after {
-  content: "";
-  width: 100%;
-  display: block;
-  position: absolute;
-  height: 15px;
-  left: 0;
-  bottom: -5px;
-  background-color: #14312F;
-  z-index: -1; }
-
 div.portrait-hidden {
   content: "";
   position: absolute;
@@ -3606,23 +3635,6 @@ a.portrait-link:hover + div.portrait-hidden {
   opacity: 1;
   position: absolute;
   top: -150px; }
-
-.btn, .btn-primary {
-  color: #FF772F;
-  background-color: transparent;
-  padding: 0.5rem 3rem;
-  border: solid 4px #FF772F;
-  font-size: 1.5rem;
-  border-radius: 0.75rem;
-  margin-top: 2rem;
-  font-family: "Larsseit-Bold", Helvetica, Arial, sans-serif; }
-  .btn:hover, .btn-primary:hover {
-    background: #FF772F;
-    color: #ffffff;
-    border: solid 4px #FF772F; }
-  .btn:active, .btn:focus, .btn:active:focus, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
-    background: #fb5700;
-    border: solid 4px #fb5700; }
 
 div.icon-group {
   display: block; }
@@ -3692,19 +3704,7 @@ div.icon-group {
     text-decoration: none;
     border-bottom: solid 1px #496B6B; }
 
-.wp {
-  visibility: hidden; }
-
-.wp-1 {
-  animation-delay: .1s; }
-
-.wp-2 {
-  animation-delay: .2s; }
-
-.wp.animated {
-  visibility: visible; }
-
-   /* FULL SCREEN MODAL STYLES
+/* FULL SCREEN MODAL STYLES
 -------------------------------------------------- */
 .fullscreen .modal-dialog {
   margin: 0;

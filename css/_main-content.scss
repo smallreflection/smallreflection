@@ -1,0 +1,84 @@
+div.portrait-hidden {
+  content:"";
+  position:absolute;
+  display:block;
+  opacity:0;
+  width:507px;
+  height:557px;
+  left:-35%;
+  top:50px;
+  background:transparent url("../images/profile-background-507x557.png");
+  background-position:cover;
+  z-index:-1;
+  transition:opacity .35s ease-out, top .25s ease-in-out;
+  top:25px;
+}
+
+a.portrait-link {
+  color:$white;
+}
+
+a.portrait-link:hover + div.portrait-hidden {
+    opacity:1;
+    position:absolute;
+    top:-150px;
+}
+
+div.icon-group {
+  display:block;
+  i {
+    font-size:1.85rem;
+    display:inline-block;
+    margin:0;
+    border-radius:.325rem;
+    margin:.5rem;
+    width:1.75rem;
+    height:1.75rem;
+    text-align:center;
+  }
+  a {
+    color:#fff;
+    display:inline-block;
+    margin:.15rem 0;
+    border:1px solid #14312F;
+    transition:background-color .5s;
+    &:hover { color:$white; }
+    &:hover::after { background:transparent; }
+      &.dribbble:hover { background-color:#ea4c89; }
+      &.twitter:hover { background-color:#55acee; }
+      &.medium:hover { background-color:#02b875; }
+      &.pinterest:hover  { background-color:#bd081c; }
+      &.linkedin:hover  { background-color:#0077B5; }
+  }
+} // end icon group
+
+  .content-main {
+  margin:9.375rem 0;
+  font:1.5rem/1.85rem $font-sans-serif $white;
+  h2 {
+    font:1.75rem/2.25rem $font-sans-serif-bold;
+  }
+  p {
+    margin-bottom:1.75rem;
+  }
+  h5 {
+    font-size:1rem;
+    font-family:$font-sans-serif-bold;
+    color:$brand-primary;
+    text-transform:uppercase;
+    letter-spacing:.5rem;
+        &.status {
+          font-size:1rem;
+          letter-spacing:.125rem;
+          color:#496B6B;
+          margin-top:3rem;
+          }
+    }
+  } // end content main
+
+  .secondary-content {
+    margin-top:5rem;
+    h5 {
+      margin-bottom:2rem;
+    }
+  }
