@@ -3,10 +3,10 @@
 
 @import "../bootstrap/scss/bootstrap.scss";
 @import "site_variables.scss";
-@import "global.scss";
-@import "waypoint-classes.scss";
-@import "header.scss";
-@import "main-content.scss";
-@import "footer.scss";
-@import "modal.scss";
-@import "media-queries.scss";
+@import "partials/global.scss";
+@import "partials/waypoint-classes.scss";
+@import "partials/header.scss";
+@import "partials/main-content.scss";
+@import "partials/footer.scss";
+@import "partials/modal.scss";
+@import "partials/media-queries.scss";
