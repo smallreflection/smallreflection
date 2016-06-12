@@ -3520,6 +3520,9 @@ a:hover::after {
     background: #fb5700;
     border: solid 4px #fb5700; }
 
+.padding-top {
+  margin-top: 4rem; }
+
 .wp {
   visibility: hidden; }
 
@@ -3691,6 +3694,41 @@ div.icon-group {
   margin-top: 5rem; }
   .secondary-content h5 {
     margin-bottom: 2rem; }
+
+ul.shots {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  ul.shots li {
+    width: 90%;
+    margin: 0 auto 1.5rem auto;
+    display: block; }
+    ul.shots li a {
+      position: relative;
+      display: block; }
+      ul.shots li a::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        height: 100%;
+        width: 100%;
+        z-index: 5;
+        background-color: rgba(168, 144, 78, 0.75);
+        opacity: 0;
+        transition: opacity 300ms ease; }
+      ul.shots li a:hover::after {
+        opacity: 1; }
+    ul.shots li img {
+      width: 100%; }
+    @media (min-width: 544px) {
+      ul.shots li {
+        display: inline-block;
+        width: 45%;
+        margin: 0 1% 1.5rem 1%; } }
+    @media (min-width: 992px) {
+      ul.shots li {
+        width: 31%; } }
 
 .footer {
   margin-top: 5rem; }
